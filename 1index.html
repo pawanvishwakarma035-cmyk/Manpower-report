@@ -1,0 +1,141 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Daily Manpower Report</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MAIN SCREEN -->
+        <div id="mainScreen">
+
+            <header>
+                <h1>DAILY MANPOWER</h1>
+                <p>Daily Staff Attendance</p>
+            </header>
+
+            <!-- Company Details -->
+            <div class="card">
+                <label>Company Name</label>
+                <input
+                    type="text"
+                    id="companyName"
+                    placeholder="Enter company name"
+                >
+
+                <label>Foreman Name</label>
+                <input
+                    type="text"
+                    id="foremanName"
+                    placeholder="Enter foreman name"
+                >
+
+                <div class="date-time">
+                    <div>
+                        <span>DATE</span>
+                        <strong id="currentDate">--</strong>
+                    </div>
+
+                    <div>
+                        <span>TIME</span>
+                        <strong id="currentTime">--</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Staff -->
+            <div class="card">
+                <h2>Staff Present</h2>
+
+                <div id="departments"></div>
+
+                <div class="total">
+                    <span>TOTAL STAFF</span>
+                    <strong id="totalStaff">0</strong>
+                </div>
+            </div>
+
+            <!-- Generate -->
+            <button class="generate-btn" onclick="generateReport()">
+                GENERATE REPORT
+            </button>
+
+        </div>
+
+
+        <!-- REPORT SCREEN -->
+        <div id="reportScreen" class="hidden">
+
+            <div class="report-card">
+
+                <div class="report-header">
+                    <h1 id="reportCompany">COMPANY NAME</h1>
+                    <h2>DAILY MANPOWER REPORT</h2>
+                </div>
+
+                <div class="report-info">
+                    <p>
+                        <strong>Foreman:</strong>
+                        <span id="reportForeman"></span>
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        <span id="reportDate"></span>
+                    </p>
+
+                    <p>
+                        <strong>Time:</strong>
+                        <span id="reportTime"></span>
+                    </p>
+                </div>
+
+                <div class="report-table">
+
+                    <div class="table-row table-heading">
+                        <span>DEPARTMENT</span>
+                        <span>PRESENT</span>
+                    </div>
+
+                    <div id="reportDepartments"></div>
+
+                    <div class="table-row total-row">
+                        <span>TOTAL STAFF</span>
+                        <strong id="reportTotal">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="report-buttons">
+                <button onclick="shareWhatsApp()" class="whatsapp-btn">
+                    SHARE ON WHATSAPP
+                </button>
+
+                <button onclick="window.print()" class="print-btn">
+                    PRINT / SAVE PDF
+                </button>
+
+                <button onclick="editReport()" class="edit-btn">
+                    EDIT REPORT
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

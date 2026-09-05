@@ -1,0 +1,351 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+header p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* CARDS */
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+
+/* INPUTS */
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #222;
+}
+
+
+/* DATE TIME */
+
+.date-time {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.date-time div {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.date-time span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+.date-time strong {
+    font-size: 14px;
+}
+
+
+/* DEPARTMENT ROW */
+
+.department-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.department-name {
+    font-size: 17px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.counter button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.counter button:active {
+    transform: scale(0.92);
+}
+
+.counter-number {
+    width: 35px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* TOTAL */
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 2px solid #222;
+}
+
+.total span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total strong {
+    font-size: 28px;
+}
+
+
+/* GENERATE BUTTON */
+
+.generate-btn {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 14px;
+    background: #111;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.generate-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* REPORT */
+
+.hidden {
+    display: none;
+}
+
+.report-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.report-header {
+    text-align: center;
+    border-bottom: 2px solid #222;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+
+.report-header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.report-header h2 {
+    font-size: 18px;
+}
+
+
+/* REPORT INFO */
+
+.report-info {
+    margin-bottom: 20px;
+}
+
+.report-info p {
+    margin: 7px 0;
+    font-size: 15px;
+}
+
+
+/* TABLE */
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    padding: 13px 5px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.table-heading {
+    font-weight: bold;
+    font-size: 13px;
+    background: #f4f4f4;
+}
+
+.table-row span:last-child,
+.table-row strong {
+    text-align: center;
+}
+
+.total-row {
+    border-top: 2px solid #222;
+    border-bottom: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 18px;
+}
+
+
+/* REPORT BUTTONS */
+
+.report-buttons {
+    margin-top: 18px;
+}
+
+.report-buttons button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+}
+
+.print-btn {
+    background: #222;
+    color: white;
+}
+
+.edit-btn {
+    background: white;
+    color: #222;
+    border: 2px solid #222 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 450px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .department-name {
+        font-size: 15px;
+    }
+
+    .counter {
+        gap: 8px;
+    }
+
+    .counter button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .report-card {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .report-buttons {
+        display: none;
+    }
+}
